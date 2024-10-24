@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBA Advanced Javascript Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Bark & Bloom Boutique</h1>
+      <p class ="centered paragraph">We're thrilled to have you here at 
+         <strong>Bark & Bloom Boutique</strong>
+         <br>
+         we believe every pet deserves the best. Explore our carefully curated 
+         collection of premium products.
+        <br>
+        Join our community of passionate pet lovers and discover special offers, tips,
+         and insights to make your pet's life even more pawsome.
+         <br>
+          Thank you for choosing us to be a part of your pet's journey!
+        
+        Happy shopping! 🐶💖</p>
+
+        <select
+            id="breedSelect"
+            style="width: 300px"
+            class="form-select form-select-lg my-1 mx-auto"
+            aria-label="form-select-lg"
+        ></select>
+        
+        <button onclick="loadDogGallery()">Use the dropdown menu to select a breed</button>
+        
+        <img id="dogImage" src="" alt="Dog" style="display: none; max-width: 300px; height: auto;">
+       
+        <div id="breedDetails" style="margin-left: 20px; font-size: 16px;"></div>
+        <div id="dogGallery" class="gallery"></div>
+        <p>Use the previous and next buttons to view other dogs of selected breed</p>
+        <button id="prevButton">Previous</button>
+        <button id="nextButton">Next</button>
+        
+        
+
+        <div class="display-container">
+            <img id="breedImage" src="" alt="Dog" style="display: none; max-width: 300px; height: auto;">
+           
+        </div>
+        <h1>Provide Your contact Information  </h1>
+        <input type="text" id="customer-name" placeholder="Customer Name" />
+        <input type="text" id="customer-phone" placeholder="Customer Phone" />
+        <input type="email" id="customer-email" placeholder="Customer Email" />
+        <button id="enter-customer-infos">Send</button>
+        <div id="feedback" style="margin-top: 10px;"></div>
+        <button id="purchaseButton">Send Purchase Request❤️</button>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+

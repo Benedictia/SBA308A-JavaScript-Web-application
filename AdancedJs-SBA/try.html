@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Modules</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+</head>
+<body>
+    <h1>Breed Information</h1>
+    
+    <div id="breedDetails"></div>
+   
+    <script type="module">
+        // Importing from a local module, ensure the path is correct
+        import {  breed } from './modules/right.js'; 
+        
+        async function loadDetailsForBreed(breed) {
+            try {
+                const detailsResponse = await axios.get(`https://api.thedogapi.com/v1/breeds/search?q=${breed}`);
+                const info = detailsResponse.data[0];
+                // Log fetched info
+                console.log('Fetched Breed Info:', info); 
+
+                if (info) {
+                    breedDetails.innerHTML = `
+                        <h3>${info.name}</h3>
+                        <p>${info.breed_group || 'Group not specified.'}</p>
+                        <p>${info.temperament || 'Temperament not specified.'}</p>
+                        <p>${info.life_span || 'Life Span not specified.'}</p>
+                    `;
+                } else {
+                    breedDetails.textContent = "Information not available.";
+                }
+            } catch (error) {
+                console.error('Error fetching breed details:', error);
+            }
+        }
+
+        loadDetailsForBreed('Boxer'); 
+    </script>
+</body>
+</html>
