@@ -22,9 +22,9 @@ h1 {
     margin-bottom: 20px;
 }
 .centered-paragraph {
-    text-align: center;      /* Centers the text */
+    text-align: center;     
     margin: 200px;  
-           /* Adds space on both sides (20px in this case) */
+         
 }
 #gallery {
     display: flex;
@@ -45,7 +45,7 @@ h1 {
 .item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images cover the item area */
+    object-fit: cover; 
 }
 
 button {
@@ -66,17 +66,17 @@ button:hover {
     justify-content: center;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items at the start of the flex container */
+    align-items: flex-start; 
     
 }
 
 #dogImage {
-    border: 1px solid #ccc; /* Optional: add a border around the image */
-    border-radius: 60px; /* Optional: add rounded corners */
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    display: block; /* Ensure it behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally */
+    border: 1px solid #ccc; 
+    border-radius: 60px; 
+    width: 300px;
+    height: 300px;
+    display: block; 
+    margin: 0 auto; 
 }
 
 #purchaseButton {
@@ -86,18 +86,18 @@ button:hover {
     background-color: rgb(0, 102, 255);
 }
 
-/* Carousel Styles */
+
 .carousel {
     display: flex;
-    justify-content: center; /* Center carousel items */
-    align-items: center; /* Center vertically */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .carousel img {
-    width: 200px; /* Fixed width for carousel images */
-    height: 200px; /* Fixed height for carousel images */
-    object-fit: cover; /* Ensure images maintain aspect ratio */
-    margin: 0 5px; /* Space between images */
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    margin: 0 5px; 
 }
 
 
