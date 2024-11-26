@@ -71,9 +71,9 @@ async function loadDogGallery(breed) {
         initialImage.src = breedImages[0];
         initialImage.style.display = 'block';
 
-        currentIndex = 0; // Reset index for new breed
-        displayImages(); // Display the first set of additional images
-        loadDetailsForBreed(breed); // Load breed details
+        currentIndex = 0;
+        displayImages(); 
+        loadDetailsForBreed(breed); 
     } catch (error) {
         console.error('Error loading dog images:', error);
     }
@@ -83,7 +83,7 @@ async function loadDogGallery(breed) {
 // Display images in the carousel
 function displayImages() {
     dogGallery.innerHTML = ''; 
-    const endIndex = Math.min(currentIndex + imagesToShow, breedImages.length); // Calculate end index
+    const endIndex = Math.min(currentIndex + imagesToShow, breedImages.length);
     for (let i = currentIndex; i < endIndex; i++) {
         const img = document.createElement('img');
         img.src = breedImages[i];
